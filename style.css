@@ -102,6 +102,12 @@ nav a:hover{
     margin: 0.5vw;
     font-size: 2em;
 }
+.tipo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
 .GAbox{
     width: 80%;
     background-color: rgb(231, 231, 231);
@@ -116,6 +122,7 @@ nav a:hover{
     background-color: white;
     transform: scale(1.03);
     transition: 1s;
+    box-shadow: 0px 0px 5px black;
 }
 div{
     border: 1px solid rgb(204, 204, 204);
@@ -129,6 +136,7 @@ section{
 }
 section:hover{
     transform: scale(1.03);
+    box-shadow: 0px 0px 5px black;
 }
 footer{
     padding: 3.5vw;
