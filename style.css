@@ -1,10 +1,16 @@
 :root{
-    
+    --blue:rgb(103, 193, 253);
+    --C1:#026E81;
+    --c2:#00ABBD;
+    --c3:#9fc6d6;
+    --c4:#FF9933;
+    --c5:#A1C7E0;
 }
 body{
     display: flex;
     flex-direction: column;
     background-color: rgb(78, 78, 78);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .cabecalho{
     display: flex;
@@ -12,9 +18,14 @@ body{
     align-items: center;
     width: 100vw;
     height: 10vw;
-    background-color: rgb(103, 193, 253);
+    background-color:var(--C1);
     color: rgb(0, 0, 0);
-    background-size: 100%;
+    border: 1px solid var(--c5);
+}
+h1{
+    font-size: 3em;
+    color: #FF9933;
+    text-shadow: 0px 0px 2px black;
 }
 .row-fita-box{
     position: fixed;
@@ -24,8 +35,8 @@ body{
     justify-content: center;
     align-items: center;
     padding: 6px;
-    background-color: rgb(33, 21, 202);
-    color: white;
+    background-color: var(--c4);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 1.3em;
     position: fixed;
@@ -33,14 +44,15 @@ body{
     left: 0vw;
     width: 22vw;
     height: 2vw;
-    border-radius: 0px 0px 30px 0px;
+    border-radius: 0px 0px 20px 0px;
     transition: 1s;
+    z-index: 9999;
 }
 .box-fita{
     width: 23vw;
     height: 95%;
-    border-radius: 0px 20% 20% 0px;
-    background-color: rgb(199, 199, 199);
+    border-radius: 0px 20px 20px 0px;
+    background-color:var(--c3);
     position: fixed;
     bottom: 0vw;
     top: 3.6vw;
@@ -54,14 +66,14 @@ body{
     left: 0vw;
 }
 .fita-box:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--c5);
 }
 nav ul li a{
     text-decoration: none;
     color: black;
 }
 nav a:hover{
-    color: rgb(89, 179, 214);
+    color:white;
 }
 /*-------------------------------------------------------------------*/
 .body-false{
@@ -69,7 +81,7 @@ nav a:hover{
     justify-content: center;
     height: auto;
     width: 100%;
-    background-color: rgb(103, 193, 253);
+    background-color: var(--c3);
 }
 .content{
     display: flex;
@@ -77,8 +89,8 @@ nav a:hover{
     padding: 50px;
     height: auto;
     width: 80vw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
 }
 .GA{
     display: flex;
@@ -87,26 +99,53 @@ nav a:hover{
     width: 98%;
 }
 .GA h3{
-    margin: 1vw;
+    margin: 0.5vw;
+    font-size: 2em;
 }
 .GAbox{
     width: 80%;
+    background-color: rgb(231, 231, 231);
 }
-article{
+.art{
     border: 1px solid rgb(160, 160, 160);
     padding: 1vw;
+    transition: 1s;
+
 }
-section{
+.art:hover{
+    background-color: white;
+    transform: scale(1.03);
+    transition: 1s;
+}
+div{
     border: 1px solid rgb(204, 204, 204);
     padding: 1vw;
 }
+section{
+    background-color: white;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 1vw;
+    transition: 1s;
+}
+section:hover{
+    transform: scale(1.03);
+}
 footer{
-    height: 5vw;
+    padding: 3.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: rgb(0, 217, 255);
+    
+}
+footer p{
+    font-size: 1.6em;
 }
 footer a{
     text-decoration: none;
-    color: rgb(168, 168, 168);
+    color: rgb(255, 255, 255);
+}
+footer a:hover{
+    text-decoration: underline;
 }
