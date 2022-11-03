@@ -5,6 +5,17 @@
     --c3:#9fc6d6;
     --c4:#FF9933;
     --c5:#A1C7E0;
+    --c6:rgb(105, 105, 105);
+
+    --d1:#000000;
+    --d2:#0d0d0d;
+    --d3:#252525;
+    --d4:#262626;
+    --d5:#3b3b3b;
+
+    --textw:white;
+    --textb:black;
+
 }
 body{
     display: flex;
@@ -35,21 +46,21 @@ h1{
     justify-content: center;
     align-items: center;
     padding: 6px;
-    background-color: var(--c4);
-    color: rgb(0, 0, 0);
+    background-color: var(--c6);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1.3em;
     position: fixed;
     top: 0vw;
     left: 0vw;
-    width: 22vw;
+    width: 9vw;
     height: 2vw;
     border-radius: 0px 0px 20px 0px;
     transition: 1s;
     z-index: 9999;
 }
 .box-fita{
-    width: 23vw;
+    width: 12vw;
     height: 95%;
     border-radius: 0px 20px 20px 0px;
     background-color:var(--c3);
@@ -57,6 +68,7 @@ h1{
     bottom: 0vw;
     top: 3.6vw;
     left: -22.8vw;
+    line-height: 2vw;
     transition: 1s;
     opacity: 0;
 }
@@ -66,7 +78,7 @@ h1{
     left: 0vw;
 }
 .fita-box:hover{
-    background-color: var(--c5);
+    background-color: var(--c4);
 }
 nav ul li a{
     text-decoration: none;
@@ -74,6 +86,17 @@ nav ul li a{
 }
 nav a:hover{
     color:white;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    margin-top: 4vw;
+}
+#hora{
+    padding: 0;
+    border: none;
+    margin-left: 5px;
 }
 /*-------------------------------------------------------------------*/
 .body-false{
@@ -102,9 +125,9 @@ nav a:hover{
     margin: 0.5vw;
     font-size: 2em;
 }
-.tipo{
+.tipos{
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background-color: white;
 }
@@ -138,13 +161,17 @@ section:hover{
     transform: scale(1.03);
     box-shadow: 0px 0px 5px black;
 }
+section:active{
+    transform: scale(1.05);
+}
 footer{
-    padding: 3.5vw;
+    padding: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(0, 217, 255);
+    font-weight: bold;
+    color: rgb(187, 187, 187);
     
 }
 footer p{
@@ -156,4 +183,58 @@ footer a{
 }
 footer a:hover{
     text-decoration: underline;
+}
+/*--------------------DARKTHEME--------------------*/
+html.dark body{
+    background-color: var(--d1);
+    color: white;
+}
+html.dark h1{
+    color: rgb(161, 161, 161);
+}
+html.dark .cabecalho{
+    background-color: var(--d3);
+}
+html.dark .fita-box{
+    background-color: red;
+}
+html.dark .fita-box:hover{
+    background-color: var(--d5);
+}
+html.dark .box-fita{
+    background-color: var(--d4);
+}
+html.dark .body-false{
+    background-color: var(--d4);
+
+}
+html.dark .content{
+    background-color: var(--d3);
+}
+html.dark .art{
+    background-color: var(--d4);
+}
+html.dark .art:hover{
+    background-color: var(--d1);
+}
+html.dark .tipos{
+    background-color: var(--d4);
+}
+html.dark .GAbox{
+    background-color: var(--d3);
+}
+html.dark section{
+    background-color: var(--d4);
+}
+html.dark section:hover{
+    background-color: var(--d1);
+}
+html.dark footer{
+    background-color: var(--d1);
+}
+html.dark nav ul li a{
+    color: var(--textw);
+}
+html.dark nav a:hover{
+    color:var(--C1);
 }
